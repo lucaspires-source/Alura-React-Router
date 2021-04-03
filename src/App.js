@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch,} from "react-router-dom";
 import Pagina404 from "./paginas/Pagina404";
 import Cabecalho from "./components/Cabecalho";
 import Post from "./paginas/Post";
+import Categoria from "./paginas/Categoria";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/sobre" component={Sobre} />
+        <Route exact path="/categoria/:id" component={Categoria} />
         <Route  path="/posts/:id" component={Post} />
         <Route component={Pagina404} />
       </Switch>
