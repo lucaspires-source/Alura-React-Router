@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { busca } from '../api/api'
 import '../assets/css/post.css'
 import {useParams, useHistory} from 'react-router-dom'
-const Post = ({}) => {
+const Post = () => {
     let history = useHistory()
     const {id} = useParams()
     const [post, setPost] = useState({})
