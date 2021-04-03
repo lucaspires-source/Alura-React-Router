@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import './assets/css/base/base.css'
+import Home from './paginas/Home'
+import Sobre from './paginas/Sobre'
+const App = () => {
+  const Router = () =>{
+    const location = window.location.pathname
+    if(location === "/sobre"){
+      return <Sobre/>
+    } else{
+      return <Home/>
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    {Router()}
+    </>
+  )
 }
 
-export default App;
+export default App
