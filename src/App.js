@@ -5,6 +5,7 @@ import Sobre from "./paginas/Sobre";
 import { BrowserRouter, Route, Switch,} from "react-router-dom";
 import Pagina404 from "./paginas/Pagina404";
 import Cabecalho from "./components/Cabecalho";
+import Post from "./paginas/Post";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/sobre" component={Sobre} />
+        <Route  path="/posts/:id" component={Post} />
         <Route component={Pagina404} />
       </Switch>
     </BrowserRouter>
